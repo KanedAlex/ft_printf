@@ -6,7 +6,7 @@
 /*   By: alienard <alienard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/20 10:23:36 by alienard          #+#    #+#             */
-/*   Updated: 2019/12/03 15:48:48 by alienard         ###   ########.fr       */
+/*   Updated: 2020/04/07 15:21:59 by alienard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int		ft_print_lpad(t_bool *fl, int r)
 	i = fl->lpad;
 	if (fl->lpad != 0)
 	{
-		if (fl->neg == 0 && fl->fpad == '0')
+		if (fl->neg == 0 && fl->fpad == '0'&& fl->d != -2147483648)
 		{
 			(fl->d < 0) ? r = ft_putchar_fd('-', r) : 0;
 			fl->d = (fl->d < 0) ? -(fl->d) : (fl->d);
